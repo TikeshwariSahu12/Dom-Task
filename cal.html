@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-Page</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    const body = document.body;
+    body.style.backgroundImage = "url('https://img.freepik.com/free-photo/calculator-glasses-sit-top-piece-paper_188544-29197.jpg')";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    body.style.color = "white";
+    body.style.justifyContent = "center";
+    body.style.display = "flex";
+    body.style.height = "auto";
+    body.style.padding = "40px";
+    body.style.paddingBottom = "440px";
+
+
+
+    const div = document.createElement("div");
+    div.style.backgroundColor = "transparent";
+    div.style.height = "auto";
+    div.style.width = "400px";
+    div.style.margin = "100px";
+    div.style.border = "2px solid black";
+    div.style.textAlign = "center"
+    // div.innerText = 'Hello';
+    body.append(div);
+
+    let num1 = document.createElement("input");
+    num1.placeholder = "Enter 1nd number..";
+    num1.style.height = "30px";
+    num1.style.margin = "10px";
+    num1.style.textAlign = "center"
+
+    div.append(num1);
+
+    let num2 = document.createElement("input");
+    num2.placeholder = "Enter 2nd number..";
+    num2.style.height = "30px";
+    num2.style.margin = "10px";
+    num2.style.textAlign = "center"
+
+
+    div.append(num2);
+    const operator = document.createElement("select");
+    operator.style.height = "30px";
+    operator.style.margin = "10px";
+
+    const operatorOptions = ['', '+', '-', '*', '/', '%', '**'];
+    operatorOptions.forEach(op => {
+        const option = document.createElement("option");
+        option.value = op;
+        option.innerText = op;
+        operator.appendChild(option);
+    });
+
+    div.append(operator);
+
+    const button = document.createElement("button");
+    button.innerText = "Calculate";
+    button.style.height = "30px";
+    button.style.margin = "10px";
+
+    div.append(button);
+
+    const result = document.createElement("div");
+    result.style.marginTop = "20px";
+    result.style.fontSize = "20px";
+    result.style.color = "Yellow";
+    div.append(result);
+
+    const operations = {
+        '+': (a, b) => a + b,
+        '-': (a, b) => a - b,
+        '*': (a, b) => a * b,
+        '/': (a, b) => b !== 0 ? a / b : "Cannot divide by 0",
+        '%': (a, b) => a % b,
+        '**': (a, b) => a ** b
+    };
+
+    button.addEventListener("click", () => {
+        const a = parseFloat(num1.value);
+        const b = parseFloat(num2.value);
+        const op = operator.value;
+
+        if (!isNaN(a) && !isNaN(b)) {
+            result.innerText = `Result: ${operations[op](a, b)}`;
+        } else {
+            result.innerText = "Please enter valid numbers.";
+        }
+    });
+
+    const clearBtn = document.createElement("button");
+    clearBtn.innerText = "Clear";
+    clearBtn.style.height = "30px";
+    clearBtn.style.margin = "10px";
+    div.append(clearBtn);
+
+    clearBtn.addEventListener("click", () => {
+        num1.value = "";
+        num2.value = "";
+        result.innerText = "";
+    });
+</script>

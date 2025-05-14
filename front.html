@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+</head>
+<body>
+</body>
+
+<script>
+    const body = document.body;
+    body.style.backgroundImage = "url('https://png.pngtree.com/thumb_back/fh260/background/20240513/pngtree-free-background-images-stock-photos-to-download-pictures-image_15734467.jpg')";
+    body.style.padding = "145px";
+    body.style.paddingBottom = "457px";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    body.style.justifyContent = "center";
+    body.style.display = "flex";
+
+    const div = document.createElement("div");
+    div.style.backgroundColor = "transparent";
+    div.style.height = "auto";
+    div.style.width = "300px";
+    div.style.margin = "100px";
+    div.style.border = "2px solid black";
+    div.style.textAlign = "center";
+    body.append(div);
+
+    // div.innerText = "hello";
+
+    let btn = document.createElement("button");
+    btn.innerText = "To-Do";
+    btn.style.height = "30px";
+    btn.style.margin = "10px";
+    div.append(btn);
+    btn.onclick = function () {
+    window.location.href = "todo.html";
+  };
+
+    let button = document.createElement("button");
+    button.innerText = "Calculator";
+    button.style.height = "30px";
+    button.style.margin = "10px";
+    div.append(button);
+    button.onclick = function () {
+    window.location.href = "cal.html";
+  };
+</script>
+</html>

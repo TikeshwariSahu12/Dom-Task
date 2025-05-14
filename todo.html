@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    const body = document.body
+    const div = document.createElement("div");
+    div.style.height = 'auto';
+    div.style.width = '500px';
+    div.style.margin = "200px";
+    div.style.marginTop = "50px";
+    div.style.justifyContent = "center";
+    div.style.border = '1px solid black';
+    div.style.backgroundRepeat = "no-repeat";
+    div.style.backgroundSize = "cover";
+
+    div.style.backgroundImage = "url('data:image/jpeg;base64,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')"
+    body.append(div);
+
+    body.style.color = "black";
+    body.style.backgroundImage = "url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')"
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    body.style.justifyContent = "center";
+    body.style.display = "flex";
+
+
+
+
+    const h1 = document.createElement("h1");
+    div.append(h1);
+    h1.innerText = "To-Do List";
+    h1.style.textAlign = "center";
+
+    const div1 = document.createElement("div");
+    div1.style.height = 'auto';
+    div1.style.width = '500px';
+    div1.innerText = "Each day I will accomplish one thing on my todo list.";
+    div1.style.textAlign = "center";
+    div1.style.fontSize = "20px";
+    div.append(div1);
+
+    const h3 = document.createElement("h3");
+    h3.innerText = "What you want to add here..";
+    h3.style.marginLeft = "20px";
+    div.append(h3);
+
+    const input = document.createElement("input");
+    input.style.height = "20px";
+    input.style.width = "450px";
+    input.style.marginLeft = "20px";
+    input.placeholder = "Typing here.."
+    input.style.border = '2px solid black';
+    div.append(input);
+
+    const btn = document.createElement("button");
+    btn.innerText = "Add";
+    btn.style.textAlign = "center";
+    btn.style.margin = "20px";
+    div.append(btn);
+
+    const div2 = document.createElement("div");
+    div2.style.borderBlockColor = "1px solid black";
+    div2.style.margin = "20px";
+    div2.style.marginTop = "1px";
+    div2.style.height = "300px";
+    div2.style.padding = "20px";
+    div2.style.backgroundRepeat = "no-repeat";
+    div2.style.backgroundSize = "cover";
+    div2.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9yXovw8VgLcKv2tdj7E-QREK3UC-Mza4JFTuYUvwcY0NO6cvKh7s_OeR-AHjrOBqLUU&usqp=CAU')"
+    div.append(div2);
+
+
+    btn.addEventListener("click", function () {
+        const value = input.value;
+        const newItem = document.createElement("div");
+        newItem.innerText = value;
+        input.value = "";
+        newItem.style.marginTop = "20px";
+        div2.append(newItem);
+
+        const deletebtn = document.createElement("button");
+        deletebtn.innerText = "Delete..";
+        deletebtn.style.border = "1px solid black";
+        deletebtn.style.height = "20px";
+        deletebtn.style.marginLeft = "20px";
+        deletebtn.style.width = "80px";
+        newItem.append(deletebtn);
+        deletebtn.addEventListener("click", function () {
+            newItem.remove();
+        });
+    });
+
+
+
+
+
+</script>
